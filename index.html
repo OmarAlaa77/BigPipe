@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BigPipe Simulation</title>
+  <style>
+    .pagelet {
+      border: 2px solid #ddd;
+      padding: 50px;
+      margin: 30px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="pagelet1" class="pagelet">Pagelet 1 Content</div>
+<div id="pagelet2" class="pagelet">Pagelet 2 Content</div>
+<div id="pagelet3" class="pagelet">Pagelet 3 Content</div>
+
+<script>
+  function simulateBigPipe(pageletId, content) {
+    var pagelet = document.getElementById(pageletId);
+    pagelet.innerHTML = content;
+    pagelet.style.display = 'block';
+  }
+
+  // Simulate loading pagelets with a delay
+  setTimeout(function () {
+    simulateBigPipe('pagelet1', 'Here Is Navigation Bar.');
+  }, 1000);
+
+  setTimeout(function () {
+    simulateBigPipe('pagelet2', 'Here Is Search Bar.');
+  }, 2000);
+
+  setTimeout(function () {
+    simulateBigPipe('pagelet3', 'Here Is Friends Bar.');
+  }, 3000);
+</script>
+
+</body>
+</html>
